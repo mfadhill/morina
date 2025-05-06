@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,9 +15,9 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full text-white bg-green-600 fixed top-0 left-0 z-20">
-      <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-        <div className="flex flex-row items-center justify-between p-4">
+    <div className="w-full h-16 text-white bg-green-600 fixed top-0 left-0 z-20">
+      <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 h-full">
+        <div className="flex flex-row items-center justify-between p-4 h-full">
           <Link
             to="/"
             className="text-3xl font-bold tracking-widest uppercase focus:outline-none"
