@@ -7,18 +7,14 @@ import Team from "./pages/Team";
 import Footer from "./components/Footer";
 import { Product } from "./pages/Product";
 import Location from "./pages/Location";
-import SimpleSwiper from "./components/Swiper";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen bg-gray-300">
         <Navbar />
-        <main className="flex-grow pt-8"> 
-          <div className="space-y-16 px-4 py-8">
-            <div className="min-h-screen bg-gray-100 p-5">
-              <SimpleSwiper />
-            </div>
+        <main className="flex-grow pt-4"> 
+          <div className="space-y-16">
             <section id="home">
               <Home />
             </section>

@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -14,8 +16,34 @@ export default function Navbar() {
     { label: "Contact", path: "#contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scroll down
+        setShowNavbar(false);
+      } else {
+        // Scroll up
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="w-full h-16 text-white bg-green-600 fixed top-0 left-0 z-20">
+    <div
+      className={`w-full h-16 text-white bg-green-600 fixed top-0 left-0 z-20 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 h-full">
         <div className="flex flex-row items-center justify-between p-4 h-full">
           <Link
@@ -46,11 +74,10 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Navigation */}
         <nav
           className={`flex-col flex-grow md:flex md:justify-end md:flex-row ${
-            menuOpen ? "flex" : "hidden"
-          }`}
+            menuOpen ? "flex bg-green-600" : "hidden"
+          } md:bg-transparent`}
         >
           {navLinks.map((item) => (
             <a
