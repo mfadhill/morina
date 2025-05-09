@@ -1,5 +1,8 @@
-import React from "react";
-
+import img3 from '../assets/3.jpg'
+import img4 from '../assets/4.jpg'
+import img5 from '../assets/5.jpg'
+import img6 from '../assets/6.jpg'
+import img7 from '../assets/7.jpg'
 export const Product = () => {
   return (
     <div>
@@ -14,31 +17,30 @@ export const Product = () => {
                 className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src={img7}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                 <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
-                  Wines
+                  Buah Kopi
                 </h3>
               </a>
             </div>
 
-            {/* Gin + Whiskey + Vodka */}
             <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-stone-50">
               <a
                 href=""
                 className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1504675099198-7023dd85f5a3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src={img5}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                 <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
-                  Gin
+                  Alpukat
                 </h3>
               </a>
               <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
@@ -47,13 +49,13 @@ export const Product = () => {
                   className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1571104508999-893933ded431?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={img3}
                     alt=""
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                   <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
-                    Whiskey
+                    Biji Kopi
                   </h3>
                 </a>
                 <a
@@ -61,32 +63,31 @@ export const Product = () => {
                   className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1626897505254-e0f811aa9bf7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={img4}
                     alt=""
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                   <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
-                    Vodka
+                    Buah Kopi
                   </h3>
                 </a>
               </div>
             </div>
 
-            {/* Brandy */}
             <div className="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col">
               <a
                 href=""
                 className="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1693680501357-a342180f1946?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src={img6}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
                 <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
-                  Brandy
+                  Kopi
                 </h3>
               </a>
             </div>
@@ -104,7 +105,7 @@ export const Product = () => {
           you hover the images. Just some dummy texts.
         </p>
         <section className="flex flex-wrap gap-10 w-full justify-center items-center">
-          {[1, 2, 3].map((item, index) => {
+          {[1, 2, 3].map((_,index) => {
             const images = [
               "https://cdn.pixabay.com/photo/2020/02/23/15/09/woman-4873600_960_720.jpg",
               "https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623_960_720.jpg",
