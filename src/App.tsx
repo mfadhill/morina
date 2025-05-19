@@ -7,13 +7,14 @@ import Team from "./pages/Team";
 import Footer from "./components/Footer";
 import { Product } from "./pages/Product";
 import Location from "./pages/Location";
+import FLoatingWa from "./components/FLoatingWa";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen bg-gray-300">
         <Navbar />
-        <main className="flex-grow pt-4"> 
+        <main className="flex-grow pt-4">
           <div className="space-y-16">
             <section id="home">
               <Home />
@@ -34,6 +35,7 @@ function App() {
           </div>
         </main>
         <Footer />
+        <FLoatingWa phoneNumber="082276548976" />
       </div>
     </BrowserRouter>
   );
