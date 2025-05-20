@@ -1,19 +1,30 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import i18n from "../i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const { t } = useTranslation();
+
+  // Supaya tombol bahasa bisa highlight sesuai bahasa aktif
+  const [language, setLanguage] = useState(i18n.language || "en");
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
+  };
+
   const navLinks = [
-    { label: "Home", path: "home" },
-    { label: "About", path: "about" },
-    { label: "Team", path: "team" },
-    { label: "Product", path: "product" },
-    { label: "Contact", path: "contact" },
+    { label: t("Home"), path: "home" },
+    { label: t("About"), path: "about" },
+    { label: t("Team"), path: "team" },
+    { label: t("Product"), path: "product" },
+    { label: t("Contact"), path: "contact" },
   ];
 
   useEffect(() => {
@@ -66,7 +77,7 @@ export default function Navbar() {
                 />
               )}
             </svg>
-          </button> 
+          </button>
         </div>
 
         <nav
@@ -84,6 +95,28 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+          <div className="flex items-center px-4 mt-2 md:mt-0 md:ml-4 space-x-2">
+            <button
+              onClick={() => changeLanguage("id")}
+              className={`text-sm px-2 py-1 rounded ${
+                language === "id"
+                  ? "bg-white text-green-600"
+                  : "hover:bg-green-700"
+              }`}
+            >
+              🇮🇩
+            </button>
+            <button
+              onClick={() => changeLanguage("en")}
+              className={`text-sm px-2 py-1 rounded ${
+                language === "en"
+                  ? "bg-white text-green-600"
+                  : "hover:bg-green-700"
+              }`}
+            >
+              🇬🇧
+            </button>
+          </div>
         </nav>
       </div>
     </div>

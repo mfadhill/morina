@@ -8,6 +8,7 @@ import { Product } from "./pages/Product";
 import Location from "./pages/Location";
 import FLoatingWa from "./components/FLoatingWa";
 import AsalProduct from "./pages/AsalProduct";
+import "./i18n";
 
 function App() {
   return (

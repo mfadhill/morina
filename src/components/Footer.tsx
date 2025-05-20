@@ -1,15 +1,18 @@
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative bg-white pt-8 pb-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
             <h4 className="text-3xl font-semibold text-gray-800">
-              Tetap terhubung dengan kami!
+              {t("footer.stay_connected")}
             </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-600">
-              Temukan kami di sosial media, kami akan membalas dalam 1–2 hari
-              kerja.
+              {t("footer.follow_us")}
             </h5>
             <div className="mt-6 flex">
               {/* Instagram */}
@@ -48,39 +51,39 @@ const Footer = () => {
             <div className="flex flex-wrap items-top mb-6">
               <div className="w-full lg:w-4/12 px-4 ml-auto">
                 <span className="block uppercase text-gray-500 text-sm font-semibold mb-2">
-                  Navigasi
+                  {t("footer.navigation")}
                 </span>
                 <ul className="list-unstyled">
                   <li>
                     <a
-                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                       href="#"
+                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                     >
-                      Tentang Kami
+                      {t("footer.about_us")}
                     </a>
                   </li>
                   <li>
                     <a
-                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                       href="#"
+                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                     >
-                      Blog
+                      {t("footer.blog")}
                     </a>
                   </li>
                   <li>
                     <a
-                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                       href="#"
+                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                     >
-                      Produk
+                      {t("footer.products")}
                     </a>
                   </li>
                   <li>
                     <a
-                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                       href="#"
+                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                     >
-                      Kontak
+                      {t("footer.contact")}
                     </a>
                   </li>
                 </ul>
@@ -88,31 +91,31 @@ const Footer = () => {
 
               <div className="w-full lg:w-4/12 px-4">
                 <span className="block uppercase text-gray-500 text-sm font-semibold mb-2">
-                  Informasi
+                  {t("footer.information")}
                 </span>
                 <ul className="list-unstyled">
                   <li>
                     <a
-                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                       href="#"
+                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                     >
-                      Kebijakan Privasi
+                      {t("footer.privacy_policy")}
                     </a>
                   </li>
                   <li>
                     <a
-                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                       href="#"
+                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                     >
-                      Syarat & Ketentuan
+                      {t("footer.terms_conditions")}
                     </a>
                   </li>
                   <li>
                     <a
-                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                       href="#"
+                      className="text-gray-600 hover:text-gray-800 font-semibold block pb-2 text-sm"
                     >
-                      FAQ
+                      {t("footer.faq")}
                     </a>
                   </li>
                 </ul>
@@ -126,10 +129,7 @@ const Footer = () => {
         <div className="flex flex-wrap items-center md:justify-between justify-center">
           <div className="w-full md:w-4/12 px-4 mx-auto text-center">
             <div className="text-sm text-gray-500 font-semibold py-1">
-              &copy; {new Date().getFullYear()}{" "}
-              <span className="text-gray-800 font-semibold">
-                Monira Gayo Terra
-              </span>
+              {t("footer.copyright", { year: new Date().getFullYear() })}
             </div>
           </div>
         </div>
