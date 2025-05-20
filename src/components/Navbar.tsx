@@ -9,11 +9,11 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const navLinks = [
-    { label: "Home", path: "#home" },
-    { label: "About", path: "#about" },
-    { label: "Team", path: "#team" },
-    { label: "Product", path: "#product" },
-    { label: "Contact", path: "#contact" },
+    { label: "Home", path: "home" },
+    { label: "About", path: "about" },
+    { label: "Team", path: "team" },
+    { label: "Product", path: "product" },
+    { label: "Contact", path: "contact" },
   ];
 
   useEffect(() => {
@@ -21,10 +21,8 @@ export default function Navbar() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scroll down
         setShowNavbar(false);
       } else {
-        // Scroll up
         setShowNavbar(true);
       }
 
@@ -32,10 +30,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
@@ -71,7 +66,7 @@ export default function Navbar() {
                 />
               )}
             </svg>
-          </button>
+          </button> 
         </div>
 
         <nav
@@ -82,8 +77,9 @@ export default function Navbar() {
           {navLinks.map((item) => (
             <a
               key={item.label}
-              href={item.path}
+              href={`#${item.path}`}
               className="px-4 py-2 mt-2 text-sm font-semibold md:mt-0 md:ml-4 focus:outline-none transition hover:bg-green-700 rounded-lg"
+              onClick={() => setMenuOpen(false)}
             >
               {item.label}
             </a>

@@ -1,4 +1,3 @@
-
 function Team() {
   return (
     <body className="bg-white">

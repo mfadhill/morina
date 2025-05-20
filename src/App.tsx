@@ -12,7 +12,7 @@ import FLoatingWa from "./components/FLoatingWa";
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gray-300">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow pt-4">
           <div className="space-y-16">
@@ -25,9 +25,9 @@ function App() {
             <section id="team">
               <Team />
             </section>
-            <section id="contact">
+            {/* <section id="contact">
               <Contact />
-            </section>
+            </section> */}
             <section id="product">
               <Product />
             </section>
