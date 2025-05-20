@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { Product } from "./pages/Product";
 import Location from "./pages/Location";
 import FLoatingWa from "./components/FLoatingWa";
+import AsalProduct from "./pages/AsalProduct";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <section id="product">
               <Product />
             </section>
+            <AsalProduct />
             <Location />
           </div>
         </main>

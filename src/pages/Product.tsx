@@ -8,7 +8,7 @@ export const Product = () => {
   return (
     <div>
       {/* SECTION PRODUK */}
-      <section className="bg-gray-300">
+      <section className="bg-gray-200">
         <div className="py-6 px-4 mx-auto max-w-screen-xl sm:py-10 lg:px-6">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 uppercase tracking-wide text-green-800">
             Produk Unggulan Morina Gayo Terra
