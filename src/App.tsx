@@ -7,13 +7,15 @@ import Team from "./pages/Team";
 import Footer from "./components/Footer";
 import { Product } from "./pages/Product";
 import Location from "./pages/Location";
+import FLoatingWa from "./components/FLoatingWa";
+import AsalProduct from "./pages/AsalProduct";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gray-300">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow pt-4"> 
+        <main className="flex-grow pt-4">
           <div className="space-y-16">
             <section id="home">
               <Home />
@@ -24,16 +26,18 @@ function App() {
             <section id="team">
               <Team />
             </section>
-            <section id="contact">
+            {/* <section id="contact">
               <Contact />
-            </section>
+            </section> */}
             <section id="product">
               <Product />
             </section>
+            <AsalProduct />
             <Location />
           </div>
         </main>
         <Footer />
+        <FLoatingWa phoneNumber="082276548976" />
       </div>
     </BrowserRouter>
   );
